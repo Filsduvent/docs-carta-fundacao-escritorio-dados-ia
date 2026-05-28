@@ -1,0 +1,29 @@
+site_name: Carta de Fundação do Escritório de Dados e IA
+site_description: Documentação corporativa sobre a estrutura, modelo operacional e responsabilidades do Escritório de Dados e Inteligência Artificial do Grupo CSC.
+
+theme:
+  name: material
+  language: pt-BR
+
+nav:
+  - Início: index.md
+  - Contexto: contexto.md
+  - Objetivo: objetivo.md
+  - Desenvolvimento: desenvolvimento.md
+  - Diretrizes: diretrizes.md
+  - Referências: referencias.md
+
+plugins:
+  - search
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - tables
+  - toc
+  - pymdownx.details
+  - pymdownx.superfences
+
+extra_css:
+  - stylesheets/extra.css
