@@ -1,0 +1,738 @@
+/* ============================================================================
+   CORPORATE STYLE SHEET - Grupo CSC
+   MkDocs Material compatible custom styles
+   ============================================================================ */
+
+/* ============================================================================
+   CSS VARIABLES - Color Palette
+   ============================================================================ */
+
+:root {
+  /* Cores Corporativas Grupo CSC */
+  --color-teal-primary: #00A89D;
+  --color-teal-light: #4DBEA6;
+  --color-teal-dark: #008076;
+  --color-gray-dark: #4A4A4A;
+  --color-gray-light: #7A7A7A;
+  --color-background: #F0F2F5;
+  --color-white: #FFFFFF;
+  
+  /* Cores para Callouts */
+  --color-alert: #FFC107;
+  --color-alert-bg: #FFF3CD;
+  --color-alert-text: #664D03;
+  
+  --color-danger: #DC3545;
+  --color-danger-bg: #F8D7DA;
+  --color-danger-text: #721C24;
+  
+  --color-success: #28A745;
+  --color-success-bg: #D4EDDA;
+  --color-success-text: #155724;
+  
+  --color-info: #17A2B8;
+  --color-info-bg: #D1ECF1;
+  --color-info-text: #0C5460;
+  
+  /* Shadow e Spacing */
+  --shadow-light: 0 2px 8px rgba(0, 0, 0, 0.08);
+  --shadow-medium: 0 4px 12px rgba(0, 0, 0, 0.12);
+  --shadow-dark: 0 8px 24px rgba(0, 0, 0, 0.16);
+  
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 1rem;
+  --spacing-md: 1.5rem;
+  --spacing-lg: 2rem;
+  --spacing-xl: 3rem;
+
+  /* MkDocs Material theme tokens */
+  --md-primary-fg-color: #00A89D;
+  --md-primary-fg-color--light: #4DBEA6;
+  --md-primary-fg-color--dark: #008076;
+  --md-accent-fg-color: #00A89D;
+  --md-default-fg-color: #4A4A4A;
+  --md-default-bg-color: #F0F2F5;
+  --md-typeset-a-color: #008076;
+}
+
+/* ============================================================================
+   BASE TYPOGRAPHY
+   ============================================================================ */
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-gray-dark);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 
+               'Oxygen', 'Ubuntu', 'Cantarell', 'Helvetica Neue', sans-serif;
+  line-height: 1.7;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--color-teal-primary);
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin: 2rem 0 1.5rem 0;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid var(--color-teal-primary);
+}
+
+h2 {
+  font-size: 2rem;
+  margin: 2rem 0 1rem 0;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--color-teal-primary);
+}
+
+h3 {
+  font-size: 1.5rem;
+  margin: 1.5rem 0 0.75rem 0;
+  color: var(--color-gray-dark);
+}
+
+h4, h5, h6 {
+  font-size: 1.25rem;
+  margin: 1rem 0 0.5rem 0;
+}
+
+/* Paragraphs e texto */
+p {
+  margin-bottom: 1rem;
+  line-height: 1.8;
+  font-size: 1rem;
+}
+
+a {
+  color: var(--color-teal-primary);
+  font-weight: 600;
+  text-decoration: underline;
+  transition: all 0.3s ease;
+}
+
+a:hover {
+  color: var(--color-teal-dark);
+  text-decoration: double underline;
+}
+
+/* ============================================================================
+   HERO SECTION
+   ============================================================================ */
+
+.hero {
+  background: var(--color-white);
+  border-left: 4px solid var(--color-teal-primary);
+  color: var(--color-gray-dark);
+  padding: var(--spacing-xl);
+  border-radius: 8px;
+  margin-bottom: var(--spacing-lg);
+  box-shadow: var(--shadow-medium);
+}
+
+.hero h1 {
+  color: var(--color-teal-primary);
+  border: none;
+  margin: 0;
+  font-size: 2.75rem;
+}
+
+.hero-subtitle {
+  color: var(--color-gray-dark);
+  font-size: 1.25rem;
+  margin-top: var(--spacing-md);
+  font-weight: 400;
+}
+
+/* ============================================================================
+   CARDS
+   ============================================================================ */
+
+.card {
+  background: var(--color-white);
+  border: none;
+  border-radius: 8px;
+  padding: var(--spacing-md);
+  margin-bottom: var(--spacing-md);
+  box-shadow: var(--shadow-light);
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  box-shadow: var(--shadow-medium);
+  transform: translateY(-2px);
+}
+
+.card-header {
+  border-bottom: 2px solid var(--color-teal-primary);
+  padding-bottom: var(--spacing-sm);
+  margin-bottom: var(--spacing-md);
+  font-weight: 600;
+  color: var(--color-teal-primary);
+}
+
+.card-accent {
+  border-left: 4px solid var(--color-teal-primary);
+  padding-left: 1.25rem;
+}
+
+.card-secondary {
+  background: var(--color-background);
+  border: 1px solid #E0E0E0;
+  box-shadow: none;
+}
+
+/* ============================================================================
+   GRID LAYOUT
+   ============================================================================ */
+
+.grid {
+  display: grid;
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-lg);
+}
+
+.grid-2 {
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.grid-3 {
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.grid-item {
+  background: var(--color-white);
+  padding: var(--spacing-md);
+  border-radius: 8px;
+  box-shadow: var(--shadow-light);
+  transition: all 0.3s ease;
+}
+
+.grid-item:hover {
+  box-shadow: var(--shadow-medium);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .grid-2,
+  .grid-3 {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ============================================================================
+   CALLOUTS / ADMONITIONS (MkDocs Material compatible)
+   ============================================================================ */
+
+/* Customizar cores dos admonitions */
+.admonition {
+  border-left: 4px solid var(--color-info);
+  background-color: rgba(23, 162, 184, 0.1);
+  padding: var(--spacing-md);
+  margin-bottom: var(--spacing-md);
+  border-radius: 4px;
+}
+
+.admonition-title {
+  font-weight: 600;
+  color: var(--color-info);
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.admonition-title::before {
+  content: '';
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-right: 0.5rem;
+  background-size: contain;
+}
+
+/* Warning */
+.admonition.warning {
+  border-left-color: var(--color-alert);
+  background-color: var(--color-alert-bg);
+}
+
+.admonition.warning .admonition-title {
+  color: var(--color-alert-text);
+}
+
+.admonition.warning .admonition-title::before {
+  content: '⚠️';
+}
+
+/* Danger */
+.admonition.danger {
+  border-left-color: var(--color-danger);
+  background-color: var(--color-danger-bg);
+}
+
+.admonition.danger .admonition-title {
+  color: var(--color-danger-text);
+}
+
+.admonition.danger .admonition-title::before {
+  content: '🚨';
+}
+
+/* Note */
+.admonition.note {
+  border-left-color: var(--color-info);
+  background-color: var(--color-info-bg);
+}
+
+.admonition.note .admonition-title {
+  color: var(--color-info-text);
+}
+
+.admonition.note .admonition-title::before {
+  content: 'ℹ️';
+}
+
+/* Success */
+.admonition.success {
+  border-left-color: var(--color-success);
+  background-color: var(--color-success-bg);
+}
+
+.admonition.success .admonition-title {
+  color: var(--color-success-text);
+}
+
+.admonition.success .admonition-title::before {
+  content: '✅';
+}
+
+/* ============================================================================
+   RISK BLOCKS (Blocos de Risco)
+   ============================================================================ */
+
+.risk-block {
+  background: var(--color-danger-bg);
+  border-left: 4px solid var(--color-danger);
+  padding: var(--spacing-md);
+  margin-bottom: var(--spacing-md);
+  border-radius: 4px;
+  color: var(--color-danger-text);
+}
+
+.risk-block-title {
+  font-weight: 700;
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.risk-block-content {
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.risk-icon {
+  display: inline-block;
+  margin-right: 0.5rem;
+  font-size: 1.2rem;
+}
+
+/* ============================================================================
+   DECISION BLOCKS (Blocos de Decisão)
+   ============================================================================ */
+
+.decision-block {
+  background: rgba(0, 168, 157, 0.1);
+  border-left: 4px solid var(--color-teal-primary);
+  padding: var(--spacing-md);
+  margin-bottom: var(--spacing-md);
+  border-radius: 4px;
+  color: #004A45;
+}
+
+.decision-block-title {
+  font-weight: 700;
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  color: var(--color-teal-primary);
+}
+
+.decision-block-content {
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.decision-icon {
+  display: inline-block;
+  margin-right: 0.5rem;
+  font-size: 1.2rem;
+}
+
+/* ============================================================================
+   BLOCKQUOTE
+   ============================================================================ */
+
+blockquote {
+  border-left: 4px solid var(--color-teal-primary);
+  padding-left: 1rem;
+  margin-left: 0;
+  color: var(--color-gray-light);
+  font-style: italic;
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+/* ============================================================================
+   CODE
+   ============================================================================ */
+
+code {
+  background-color: #F5F5F5;
+  color: #C7254E;
+  font-family: 'Monaco', 'Courier New', monospace;
+  font-size: 0.9em;
+  padding: 0.2em 0.4em;
+  border-radius: 3px;
+  font-weight: 500;
+}
+
+pre {
+  background-color: #2D2D2D;
+  color: #F8F8F2;
+  padding: 1rem;
+  border-radius: 8px;
+  overflow-x: auto;
+  box-shadow: var(--shadow-light);
+  line-height: 1.5;
+  margin-bottom: var(--spacing-md);
+}
+
+pre code {
+  background-color: transparent;
+  color: #F8F8F2;
+  padding: 0;
+  font-size: 0.9rem;
+}
+
+/* ============================================================================
+   IMAGES
+   ============================================================================ */
+
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: var(--shadow-light);
+  margin: var(--spacing-md) 0;
+  transition: box-shadow 0.3s ease;
+}
+
+img:hover {
+  box-shadow: var(--shadow-medium);
+}
+
+figure {
+  text-align: center;
+  margin: var(--spacing-md) 0;
+}
+
+figcaption {
+  font-size: 0.9rem;
+  color: var(--color-gray-light);
+  font-style: italic;
+  margin-top: 0.5rem;
+}
+
+/* Responsive images */
+.md-content img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ============================================================================
+   TABLES
+   ============================================================================ */
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: var(--spacing-md);
+  background: var(--color-white);
+  box-shadow: var(--shadow-light);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+thead {
+  background-color: var(--color-teal-primary);
+  color: var(--color-white);
+}
+
+th {
+  padding: var(--spacing-sm);
+  text-align: left;
+  font-weight: 600;
+  border-bottom: 2px solid var(--color-teal-primary);
+}
+
+td {
+  padding: var(--spacing-sm);
+  border-bottom: 1px solid #E0E0E0;
+}
+
+tbody tr:nth-child(even) {
+  background-color: var(--color-background);
+}
+
+tbody tr:hover {
+  background-color: rgba(0, 168, 157, 0.05);
+}
+
+/* ============================================================================
+   LISTS
+   ============================================================================ */
+
+ul {
+  margin-bottom: var(--spacing-md);
+  padding-left: 1.5rem;
+}
+
+ul li {
+  margin-bottom: 0.5rem;
+  line-height: 1.8;
+}
+
+ul li::marker {
+  color: var(--color-teal-primary);
+  font-weight: bold;
+}
+
+ol {
+  margin-bottom: var(--spacing-md);
+  padding-left: 1.5rem;
+}
+
+ol li {
+  margin-bottom: 0.5rem;
+  line-height: 1.8;
+}
+
+/* Task lists */
+input[type="checkbox"] {
+  accent-color: var(--color-teal-primary);
+  margin-right: 0.5rem;
+}
+
+/* ============================================================================
+   BUTTONS
+   ============================================================================ */
+
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background-color: var(--color-teal-primary);
+  color: var(--color-white);
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: var(--color-teal-dark);
+  box-shadow: var(--shadow-medium);
+  transform: translateY(-2px);
+}
+
+.btn-secondary {
+  background-color: var(--color-gray-dark);
+}
+
+.btn-secondary:hover {
+  background-color: #2A2A2A;
+}
+
+/* ============================================================================
+   TABS
+   ============================================================================ */
+
+.tabbed-content {
+  border-radius: 8px;
+  box-shadow: var(--shadow-light);
+  overflow: hidden;
+}
+
+.tabbed-labels label {
+  background-color: var(--color-background);
+  border-bottom: 2px solid transparent;
+  color: var(--color-gray-dark);
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.tabbed-labels label:hover {
+  background-color: rgba(0, 168, 157, 0.05);
+}
+
+.tabbed-labels label.active {
+  background-color: var(--color-teal-primary);
+  color: var(--color-white);
+  border-bottom-color: var(--color-teal-primary);
+}
+
+/* ============================================================================
+   SPACING UTILITIES
+   ============================================================================ */
+
+.mt-1 { margin-top: var(--spacing-xs); }
+.mt-2 { margin-top: var(--spacing-sm); }
+.mt-3 { margin-top: var(--spacing-md); }
+.mt-4 { margin-top: var(--spacing-lg); }
+.mt-5 { margin-top: var(--spacing-xl); }
+
+.mb-1 { margin-bottom: var(--spacing-xs); }
+.mb-2 { margin-bottom: var(--spacing-sm); }
+.mb-3 { margin-bottom: var(--spacing-md); }
+.mb-4 { margin-bottom: var(--spacing-lg); }
+.mb-5 { margin-bottom: var(--spacing-xl); }
+
+.p-1 { padding: var(--spacing-xs); }
+.p-2 { padding: var(--spacing-sm); }
+.p-3 { padding: var(--spacing-md); }
+.p-4 { padding: var(--spacing-lg); }
+.p-5 { padding: var(--spacing-xl); }
+
+/* ============================================================================
+   CONTENT STYLING
+   ============================================================================ */
+
+.md-content {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: var(--spacing-lg);
+}
+
+.md-typeset {
+  line-height: 1.8;
+}
+
+.md-typeset strong {
+  color: var(--color-teal-primary);
+  font-weight: 700;
+}
+
+/* ============================================================================
+   EXECUTIVE PRESENTATION STYLE
+   ============================================================================ */
+
+.presentation-section {
+  background: var(--color-white);
+  border-radius: 8px;
+  padding: var(--spacing-lg);
+  margin-bottom: var(--spacing-lg);
+  box-shadow: var(--shadow-light);
+  page-break-inside: avoid;
+}
+
+.presentation-title {
+  color: var(--color-teal-primary);
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: var(--spacing-md);
+  padding-bottom: var(--spacing-sm);
+  border-bottom: 3px solid var(--color-teal-primary);
+}
+
+.presentation-highlight {
+  background: linear-gradient(120deg, rgba(0, 168, 157, 0.1), rgba(77, 190, 166, 0.1));
+  padding: var(--spacing-md);
+  border-radius: 8px;
+  border-left: 4px solid var(--color-teal-primary);
+  margin: var(--spacing-md) 0;
+}
+
+/* ============================================================================
+   PRINT STYLES
+   ============================================================================ */
+
+@media print {
+  body {
+    background: var(--color-white);
+  }
+  
+  .card {
+    page-break-inside: avoid;
+    box-shadow: none;
+    border: 1px solid #E0E0E0;
+  }
+  
+  img {
+    page-break-inside: avoid;
+  }
+  
+  h1, h2, h3 {
+    page-break-after: avoid;
+  }
+}
+
+/* ============================================================================
+   DARK MODE SUPPORT (Optional)
+   ============================================================================ */
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background: #1E1E1E;
+    color: #E0E0E0;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    color: #4DBEA6;
+  }
+  
+  .card,
+  table,
+  pre {
+    background: #2D2D2D;
+    color: #E0E0E0;
+  }
+  
+  code {
+    background-color: #1E1E1E;
+    color: #4DBEA6;
+  }
+  
+  blockquote {
+    color: #B0B0B0;
+  }
+}
+
+/* ============================================================================
+   ANIMATION
+   ============================================================================ */
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.card,
+.admonition,
+img {
+  animation: fadeIn 0.3s ease-in-out;
+}
